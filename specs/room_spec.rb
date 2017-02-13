@@ -60,10 +60,14 @@ class RoomTest < Minitest::Test
 
   def test_bar_room_capacity
     assert_equal(4, @room1.capacity)
-  end 
+  end
 
-
-
+  def test_cannot_add_if_max_capacity
+  no_room = @room1.addGuest("A", "Guest")
+  assert_equal(4, @room1.guestlist.length)
+  assert_equal("Sorry, maximum capacity reached!", no_room)
+  
+  end  
 
   def test_karaoke_room_starts_with_no_songs
     assert_equal(0, @room2.guestlist.length)

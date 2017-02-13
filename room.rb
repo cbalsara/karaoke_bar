@@ -19,8 +19,12 @@ class Room
   end 
 
   def addGuest(first, last)
-    result = @guestlist << first + last 
-    return result.length
+    if @guestlist.length >= @capacity
+        return "Sorry, maximum capacity reached!"
+      else 
+      result = @guestlist << first + last 
+      return result.length 
+    end 
   end 
 
   def removeGuest()
@@ -34,7 +38,7 @@ class Room
     return result.length
   end 
 
-  
+
 
 
 
