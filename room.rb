@@ -17,6 +17,17 @@ class Room
     result.length
   end 
 
+  def addGuest(first, last)
+    result = @guestlist << first + last 
+    return result.length
+  end 
+
+  def removeGuest()
+    @guestlist.shift
+    result = @guestlist
+    return result.length
+  end 
+
 
 
 
