@@ -39,6 +39,11 @@ class RoomTest < Minitest::Test
     assert_equal(4, number_of_occupants)
   end 
 
+  def test_add_guest_to_room
+    guests_added = @room2.addGuest("Cyrus", "Balsara")
+    assert_equal(1, guests_added)
+  end 
+
   def test_room_starts_with_no_songs
     assert_equal(0, @room2.guestlist.length)
   end 
