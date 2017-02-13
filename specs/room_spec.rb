@@ -31,6 +31,11 @@ class RoomTest < Minitest::Test
     assert_equal(4, number_of_occupants)
   end 
 
+  def test_room_has_songs
+    number_of_songs = @room1.calculate_song_total()
+    assert_equal(3, number_of_songs)
+  end 
+
 
 
 

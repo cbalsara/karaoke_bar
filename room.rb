@@ -12,6 +12,11 @@ class Room
     result.length
   end 
 
+  def calculate_song_total
+    result = @playlist.map{|song| song}
+    result.length
+  end 
+
 
 
 
