@@ -20,6 +20,7 @@ class RoomTest < Minitest::Test
     playlist = [song1, song2, song3]
     playlist2 = []
 
+
     @room1 = Room.new("Bar Room", guestlist, playlist)
     @room2 = Room.new("Karaoke Room", guestlist2, playlist2)
    
@@ -58,14 +59,21 @@ class RoomTest < Minitest::Test
 
   end 
 
-  def test_room_starts_with_no_songs
+  def test_karaoke_room_starts_with_no_songs
     assert_equal(0, @room2.guestlist.length)
   end 
 
-  def test_room_has_songs
+  def test_bar_room_has_songs
     number_of_songs = @room1.calculate_song_total()
     assert_equal(3, number_of_songs)
   end 
+
+  def test_add_song_to_karaoke_room
+    song_added = @room2.addSong("Dean Martin", "Ain't that a Kick in the Head")
+    assert_equal(1, song_added)
+  end 
+
+
 
 
 

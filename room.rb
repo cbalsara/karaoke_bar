@@ -28,6 +28,11 @@ class Room
     return result.length
   end 
 
+  def addSong(artist, title)
+    result = @playlist.<< artist + title
+    return result.length
+  end 
+
 
 
 
