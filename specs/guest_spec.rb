@@ -15,9 +15,5 @@ class TestGuest < Minitest::Test
   def test_guest_has_surname
     assert_equal('Balsara', @guest1.surname)
   end 
-
-
-
-
-
+  
 end 
