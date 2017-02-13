@@ -1,10 +1,11 @@
 class Room
-  attr_accessor :room_name, :guestlist, :playlist
+  attr_accessor :room_name, :guestlist, :playlist, :capacity
 
   def initialize(name, guests, songs)
     @room_name = name
     @guestlist = guests
     @playlist = songs
+    @capacity = 4
   end 
 
   def calculate_guest_total
@@ -32,6 +33,8 @@ class Room
     result = @playlist.<< artist + title
     return result.length
   end 
+
+  
 
 
 
