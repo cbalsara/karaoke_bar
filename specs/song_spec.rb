@@ -12,6 +12,10 @@ class SongTest < Minitest::Test
     assert_equal('Fleetwood Mac', @song1.artist_name)
   end 
 
+  def test_song_has_name
+    assert_equal('Rumours', @song1.song_name)
+  end 
+
 
 
 
