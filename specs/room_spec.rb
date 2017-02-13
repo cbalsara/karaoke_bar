@@ -12,18 +12,26 @@ class RoomTest < Minitest::Test
     guest3 = Guest.new("Charles", "Xavier")
     guest4 = Guest.new("Frodo", "Baggins")
     guestlist = [guest1, guest2, guest3, guest4]
+    guestlist2 = []
 
     song1 = Song.new("Metallica", "For Whom the Bell Tolls")
     song2 = Song.new("AC/DC", "Whole Lotta Rosie")
     song3 = Song.new("Pink Floyd", "Coming Back to Life")
     playlist = [song1, song2, song3]
+    playlist2 = []
 
     @room1 = Room.new("Karaoke Room", guestlist, playlist)
+    @room2 = Room.new("Karaoke Room", guestlist2, playlist2)
    
   end 
 
   def test_room_has_name
     assert_equal('Karaoke Room', @room1.room_name)
+  end 
+
+  def test_room_starts_empty
+    assert_equal(0, @room2.guestlist.length)
+
   end 
 
   def test_room_has_guests
