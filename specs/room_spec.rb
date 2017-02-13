@@ -29,7 +29,7 @@ class RoomTest < Minitest::Test
     assert_equal('Karaoke Room', @room1.room_name)
   end 
 
-  def test_room_starts_empty
+  def test_room_starts_with_no_guests
     assert_equal(0, @room2.guestlist.length)
 
   end 
@@ -37,6 +37,10 @@ class RoomTest < Minitest::Test
   def test_room_has_guests
     number_of_occupants = @room1.calculate_guest_total()
     assert_equal(4, number_of_occupants)
+  end 
+
+  def test_room_starts_with_no_songs
+    assert_equal(0, @room2.guestlist.length)
   end 
 
   def test_room_has_songs
