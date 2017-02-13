@@ -3,7 +3,7 @@ class Guest
 
   def initialize(first, last)
     @first_name = first
-    @surname = surname
+    @surname = last
   end 
 
 

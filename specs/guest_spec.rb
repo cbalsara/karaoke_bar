@@ -12,6 +12,10 @@ class TestGuest < Minitest::Test
     assert_equal('Cyrus', @guest1.first_name)
   end 
 
+  def test_guest_has_surname
+    assert_equal('Balsara', @guest1.surname)
+  end 
+
 
 
 
